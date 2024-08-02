@@ -3,11 +3,20 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <nav className="w-full border-0 py-4 lg:px-24 px -10 bg-gray-950">
-      <h1 className="text-3xl text-white">
-        <Link href="/">Dewey Jewelry Co.</Link>
-        <div>Upload</div>;
-      </h1>
-    </nav>
+    <header className="py-2 bg-gray-952">
+      <div className="max-w-[100rem] px-12 mx-auto flex justify-between">
+        <Link href="/">
+          <h1 className={"uppercase text-yellow-500 text-center py-2 ${font}"}>
+            Dewey Jewelry Co.
+          </h1>
+        </Link>
+        <Link
+          href="/product/upload"
+          className="uppercase text-green-951 text-xl py-2 hover:text-yellow-700"
+        >
+          Upload {">"}
+        </Link>
+      </div>
+    </header>
   );
 }
